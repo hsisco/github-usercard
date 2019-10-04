@@ -49,4 +49,9 @@ function gitCard(user) {
     cardInfo.appendChild(following);
     cardInfo.appendChild(bio);
     profile.appendChild(profileURL);
+
+    card.classList.add('card');
+    imageURL.classList.add('cardImg');
+    name.classList.add('name');
+    userName.classList.add('username');
 }
