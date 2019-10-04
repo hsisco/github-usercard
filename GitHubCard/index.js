@@ -37,4 +37,16 @@ function gitCard(user) {
     followers = document.createElement('p'),
     following = document.createElement('p'),
     bio = document.createElement('p');
+
+    card.appendChild(imageURL);
+    card.appendChild(cardInfo);
+    cardInfo.appendChild(name);
+    cardInfo.appendChild(userName);
+    cardInfo.appendChild(location);
+    cardInfo.appendChild(profile);
+    cardInfo.appendChild(followers);
+    cardInfo.appendChild(followers);
+    cardInfo.appendChild(following);
+    cardInfo.appendChild(bio);
+    profile.appendChild(profileURL);
 }
