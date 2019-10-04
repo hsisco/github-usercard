@@ -1,3 +1,7 @@
+const followersArray = ['hsisco','markgowen', 'ndacode', 'chelsabeth', 'LenWinkler', 'roywakumelojr', 'tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
+const cards = document.querySelector('.cards');
+
+
 followersArray.forEach(user => {
   axios
   .get(`https://api.github.com/users/${user}`)
@@ -13,8 +17,7 @@ followersArray.forEach(user => {
 
 
 
-const followersArray = ['hsisco','markgowen', 'ndacode', 'chelsabeth', 'LenWinkler', 'roywakumelojr', 'tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
-const cards = document.querySelector('.cards');
+
 
 function gitCard(user) {
   const 
@@ -57,5 +60,11 @@ function gitCard(user) {
     following.textContent = `Following: ${user.following}`;
     bio.textContent = `Bio: ${user.bio}`;
 
+    function link(profile, profileURL) {
+      let str = profile;
+      var result = str.link(profileURL);
+      document.querySelector('a').innerHTML = result;
+    }
     
+    return card;
 }
