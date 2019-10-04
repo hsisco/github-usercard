@@ -12,17 +12,9 @@ followersArray.forEach(user => {
 });
 
 
-/* Step 5: Now that you have your own card getting added to the DOM, either 
-          follow this link in your browser https://api.github.com/users/<Your github name>/followers 
-          , manually find some other users' github handles, or use the list found 
-          at the bottom of the page. Get at least 5 different Github usernames and add them as
-          Individual strings to the friendsArray below.
-          
-          Using that array, iterate over it, requesting data for each user, creating a new card for each
-          user, and adding that card to the DOM.
-*/
 
-const followersArray = [];
+const followersArray = ['hsisco','markgowen', 'ndacode', 'chelsabeth', 'LenWinkler', 'roywakumelojr', 'tetondan', 'dustinmyers', 'justsml', 'luishrd', 'bigknell'];
+const cards = document.querySelector('.cards');
 
 function gitCard(user) {
   const 
@@ -64,4 +56,6 @@ function gitCard(user) {
     followers.textContent = `Followers: ${user.followers}`;
     following.textContent = `Following: ${user.following}`;
     bio.textContent = `Bio: ${user.bio}`;
+
+    
 }
