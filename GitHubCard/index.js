@@ -54,4 +54,14 @@ function gitCard(user) {
     imageURL.classList.add('cardImg');
     name.classList.add('name');
     userName.classList.add('username');
+
+    imageURL.src = user.avatar_url;
+    name.textContent = user.name;
+    userName.textContent = user.login;
+    location.textContent = `Location: ${user.location}`;
+    profile.textContent = `Profile`;
+    profileURL.src = user.url;
+    followers.textContent = `Followers: ${user.followers}`;
+    following.textContent = `Following: ${user.following}`;
+    bio.textContent = `Bio: ${user.bio}`;
 }
